@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <input id="q" placeholder="Search…" onkeydown="checkEnter(event)">
+
+  <script>
+    function checkEnter(e) {
+      if (e.key === "Enter") {
+        const q = document.getElementById("q").value.trim();
+        if (!q) return;
+        window.location.href = "/search?q=" + encodeURIComponent(q);
+      }
+    }
+  </script>
+</body>
+</html>
