@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ddg-proxy
+    env: node
+    region: ohio
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    plan: starter
+    envVars:
+      PUPPETEER_CACHE_DIR: "/tmp"
